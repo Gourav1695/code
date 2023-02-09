@@ -11,7 +11,8 @@ void generate(string &s,int open,int close)// making the defination of function
 	valid.push_back(s);
 	return ;
 }
-	// generate(s, open, close); //if we use s not &s then copy will be made that increases the time complexicity so we should pass with reference
+	// generate(s, open, close); //if we use s not &s then copy will
+	// be made that increases the time complexicity so we should pass with reference
 	if(open>0){
 		s.push_back('(');
 		generate(s,open-1,close);
@@ -33,7 +34,7 @@ int main(){
 	cin>>n;
 	string s;
 	generate(s,n,n);
-	
+
 	for(auto element : valid){
 		cout<<element<<endl;
 	}
